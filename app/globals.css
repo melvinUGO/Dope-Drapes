@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h1 {
+  @apply text-[#212121] font-normal text-[1.1rem] sm:text-[1.3rem] dark:text-[#CCCCCC];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a {
+  @apply dark:text-[#FFFFFF];
+}
+
+p {
+  @apply mb-[1rem] text-[.8rem] dark:text-white;
+}
+
+label {
+  @apply w-[0.85rem] pt-2 font-light;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-[#ffffff];
+}
+
+input,
+select {
+  @apply outline-none w-full p-3 border border-[#21212180] my-1 dark:bg-[#333] dark:text-[#CCC];
+}
+
+.center {
+  @apply max-w-[1200px] mx-auto;
+}
+
+.btn {
+  @apply bg-[#212121] dark:bg-[#333333] hover:bg-black text-[#fff] text-[.75rem] text-center tracking-wider py-3 px-5 w-full;
+}
+
+.nav-text {
+  @apply text-[#222];
+}
+
+nav svg {
+  @apply text-[1.5rem] sm:text-[1.7rem];
+}
+
+.sidebar-links-container a {
+  @apply border-b border-b-[#e4e4e4] dark:border-b-[#666666] p-1;
+}
+
+.sidebar-links-container a:nth-last-child(1) {
+  @apply border-0;
+}
+
+.footer-links-container a {
+  @apply w-fit;
+}
+
+.contact-links p {
+  @apply mb-[1rem] text-[#212121] text-[.85rem];
+}
+
+.contact-links p a {
+  @apply font-bold;
+}
+
+.transition-max-h {
+  transition-property: max-height;
 }
