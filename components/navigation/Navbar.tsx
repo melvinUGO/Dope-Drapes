@@ -19,20 +19,23 @@ const Navbar = () => {
   const [cartState, setCartState] = useState<Cart[]>([]);
   const pathname = usePathname();
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      setIsCollapsed(prevScrollPos < currentScrollPos);
-      setPrevScrollPos(currentScrollPos);
-    };
+    // Check if window is defined (client-side)
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        const currentScrollPos = window.scrollY;
+        setIsCollapsed(prevScrollPos < currentScrollPos);
+        setPrevScrollPos(currentScrollPos);
+      };
 
-    window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [prevScrollPos]);
 
   // Hide navbar when user in checkout
