@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="relative dark:bg-[#121212] dark:text-[#CCCCCC]">
+        <div className="relative">
           <ReduxProvider>
             <AppContextProvider>
               <AppThemeprovider>
@@ -33,7 +33,7 @@ export default function RootLayout({
                 <Navbar />
                 <SearchModal />
                 <CartModal />
-                <div className=" mt-28">{children}</div>
+                <div className=" mt-24">{children}</div>
                 <Footer />
               </AppThemeprovider>
             </AppContextProvider>

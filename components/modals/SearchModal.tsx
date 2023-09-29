@@ -10,7 +10,7 @@ const SearchModal = () => {
   return (
     <dialog
       ref={searchModalRef}
-      className="p-0 w-full sm:w-[75vw] md:max-w-[600px] backdrop:bg-[rgba(0,0,0,.7)]"
+      className="p-0 w-full sm:w-[75vw] md:max-w-[600px] backdrop:bg-[rgba(0,0,0,.7)] border dark:border-1 dark:border-[#666666]"
     >
       <div className=" flex items-center justify-between bg-[#f2f2f2] dark:bg-[#444444] p-3">
         <div></div>
