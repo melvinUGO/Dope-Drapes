@@ -16,7 +16,7 @@ const questions = [
   },
   {
     id: 4,
-    title: "WHERE CAN I FOLLOW DE KREATORS IDEA?",
+    title: "WHERE CAN I FOLLOW Dope drapes?",
     info: " <a href='http://' target='_blank' rel='noopener noreferrer'> @fakeAcoount</a>  <a href='http://' target='_blank' rel='noopener noreferrer'> @fakeAcoount</a>",
   },
   {

@@ -28,8 +28,8 @@ const Sidebar = () => {
         >
           <Link href="/products">SHOP</Link>
           {/* <Link href="/">CAMPAIGNS</Link> */}
-          <Link href="/">ARTICLES</Link>
-          <Link href="/">LOOKBOOK</Link>
+          <Link href="#">ARTICLES</Link>
+          <Link href="#">LOOKBOOK</Link>
           {user && <Link href={"/account"}>ACCOUNT</Link>}
           {user ? (
             <Link onClick={logout} href="/">

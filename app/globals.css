@@ -66,3 +66,7 @@ nav svg {
 .transition-max-h {
   transition-property: max-height;
 }
+
+.auth-error {
+  @apply text-red-500;
+}

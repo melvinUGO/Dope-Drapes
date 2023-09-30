@@ -67,7 +67,9 @@ const AccountRegisterPage = () => {
                 id="firstName"
                 {...register("firstName")}
               />
-              {errors.firstName && <small>{errors.firstName.message}</small>}
+              {errors.firstName && (
+                <small className="auth-error">{errors.firstName.message}</small>
+              )}
             </div>
             <div className="w-full">
               <label htmlFor="lastName">Last Name</label>
@@ -79,7 +81,9 @@ const AccountRegisterPage = () => {
                 id="lastName"
                 {...register("lastName")}
               />
-              {errors.lastName && <small>{errors.lastName.message}</small>}
+              {errors.lastName && (
+                <small className="auth-error">{errors.lastName.message}</small>
+              )}
             </div>
           </div>
           <label htmlFor="email">Email</label>
@@ -91,7 +95,9 @@ const AccountRegisterPage = () => {
             id="email"
             {...register("email")}
           />
-          {errors.email && <small>{errors.email.message}</small>}
+          {errors.email && (
+            <small className="auth-error">{errors.email.message}</small>
+          )}
 
           <br />
           <label htmlFor="password">Password</label>
@@ -103,7 +109,9 @@ const AccountRegisterPage = () => {
             type="password"
             {...register("password")}
           />
-          {errors.password && <small>{errors.password.message}</small>}
+          {errors.password && (
+            <small className="auth-error">{errors.password.message}</small>
+          )}
 
           {error && (
             <p className="text-red-500">

@@ -34,13 +34,11 @@ export async function GET(request) {
 
 export async function PUT(request) {
   await mongooseConnect();
-  console.log("put");
 
   const body = await request.json();
   const { userId, name, email, state, number, address } = body;
 
   const userAddress = await Address.findOne({ userId });
-  console.log(name);
 
   const updatedAddress = await Address.findByIdAndUpdate(userAddress._id, {
     name,

@@ -64,7 +64,9 @@ const AccountloginPage = () => {
             id="email"
             {...register("email")}
           />
-          {errors.email && <small>{errors.email.message}</small>}
+          {errors.email && (
+            <small className="auth-error">{errors.email.message}</small>
+          )}
           <br />
           <label htmlFor="password">Password</label>
           <br />
@@ -75,7 +77,9 @@ const AccountloginPage = () => {
             type="password"
             {...register("password")}
           />
-          {errors.password && <small>{errors.password.message}</small>}
+          {errors.password && (
+            <small className="auth-error">{errors.password.message}</small>
+          )}
 
           <p>
             {" "}

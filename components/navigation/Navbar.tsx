@@ -18,7 +18,7 @@ const Navbar = () => {
   const cart = useAppSelector((state) => state.cartReducer);
   const [cartState, setCartState] = useState<Cart[]>([]);
   const pathname = usePathname();
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false); // Start with the navbar collapsed
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
@@ -26,7 +26,14 @@ const Navbar = () => {
     if (typeof window !== "undefined") {
       const handleScroll = () => {
         const currentScrollPos = window.scrollY;
-        setIsCollapsed(prevScrollPos < currentScrollPos);
+
+        // Check if the user is at the top of the page, and if so, uncollapse the navbar
+        if (currentScrollPos === 0) {
+          setIsCollapsed(false);
+        } else {
+          setIsCollapsed(prevScrollPos < currentScrollPos);
+        }
+
         setPrevScrollPos(currentScrollPos);
       };
 

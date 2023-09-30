@@ -41,7 +41,7 @@ const Footer = () => {
             Melvin Ugo
           </a>
         </small>
-        <small> &copy; 2023, De Kreator Idea </small>
+        <small> &copy; 2023, Dope Drapes </small>
       </div>
     </footer>
   );

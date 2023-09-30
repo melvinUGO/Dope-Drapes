@@ -7,7 +7,7 @@ const PrivacyPolicyPage = () => {
     <>
       <div className=" p-[20px] max-w-[560px] mx-auto">
         <HeadingOne text={"PRIVACY POLICY"} />
-        <p>De Kreator Idea Privacy Policy</p>
+        <p>Dope Drapes Privacy Policy</p>
         <p>
           This Privacy Policy describes how your personal information is
           collected, used, and shared when you visit or make a purchase from

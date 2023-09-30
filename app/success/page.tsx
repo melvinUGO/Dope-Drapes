@@ -12,6 +12,7 @@ const SuccessPage = () => {
   useEffect(() => {
     // Clear cart items on successful order
     dispatch(clearCart());
+    console.log("cart cleared");
   }, []);
 
   return (

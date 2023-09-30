@@ -18,7 +18,7 @@ const CheckoutPage = () => {
           <span className=" text-[#197bbd]">Cart</span>
           <FaAngleRight />
         </span>
-        <span className=" flex items-center text-black">
+        <span className=" flex items-center text-black dark:text-white">
           Information
           <FaAngleRight />
         </span>

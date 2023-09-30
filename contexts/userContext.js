@@ -23,7 +23,6 @@ export const UserContextProvider = ({ children }) => {
 
   const saveUser = (userId, token) => {
     localStorage.setItem("user", JSON.stringify({ userId, token }));
-    console.log("user saved");
     getUserDetails();
   };
 
@@ -31,7 +30,6 @@ export const UserContextProvider = ({ children }) => {
     localStorage.removeItem("user");
     setUser("");
     getUserDetails();
-    console.log("log out");
   };
 
   return (
